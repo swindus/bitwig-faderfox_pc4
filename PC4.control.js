@@ -1,9 +1,5 @@
 loadAPI(11);
 
-// Remove this if you want to be able to use deprecated methods without causing script to stop.
-// This is useful during development.
-//host.setShouldFailOnDeprecatedUse(true);
-
 host.defineController("Faderfox", "PC4", "0.1", "fa46371e-5e65-4b54-9ebd-4d1e43cebfc2", "Stefan Windus");
 host.defineMidiPorts(1, 1);
 
@@ -35,9 +31,6 @@ var CC_MACRO_RANGE_LO = 17;
 
 function init() {
    host.getMidiInPort(0).setMidiCallback(onMidi0);
-
-   //cursorTrack = host.createCursorTrack(8, 0);
-   //cursorDevice = cursorTrack.createCursorDevice();
 
    //Creates an array of user controls with the proper amount of CC#s
    userControls = host.createUserControls(CC_USER_RANGE_HI - CC_USER_RANGE_LO + 1);
