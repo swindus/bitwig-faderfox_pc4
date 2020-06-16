@@ -43,13 +43,11 @@ function init() {
    cursorDevice = host.createCursorDevice();
    controlPageCursor = cursorDevice.createCursorRemoteControlsPage(8);
 
-   // TODO: Perform further initialization here.
    println("PC4 initialized!");
 }
 
 // Called when a short MIDI message is received on MIDI input port 0.
 function onMidi0(status, data1, data2) {
-   // TODO: Implement your MIDI input handling code here.
 
    // Checks if the MIDI data is a CC
    if (isChannelController(status))
